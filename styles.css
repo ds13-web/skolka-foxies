@@ -1,46 +1,86 @@
 @font-face {
   font-family: 'Abordage-Regular';
-  src: url('/Abordage-Regular.woff2') format('woff2');
+  src: url('/Abordage-Regular.woff2') format('woff2'),
+       url('/Abordage-Regular.woff') format('woff'),
+       url('/Abordage-Regular.ttf') format('truetype');
+  font-display: swap;
 }
 
 * {
   margin: 0;
   padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 
 body {
-  font-family: 'Abordage-Regular', Helvetica, sans-serif;
+  font-family: 'Abordage-Regular', Helvetica, Arial, sans-serif;
   background-color: #ffe9dd;
   color: #ff804f;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
 }
 
 .container {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -moz-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   padding: 60px 30px;
   min-height: 100vh;
+  min-height: -webkit-fill-available;
+  min-height: -moz-available;
+  min-height: stretch;
 }
 
 .content {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -moz-box-orient: vertical;
+  -moz-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   gap: 50px;
   max-width: 900px;
   width: 100%;
 }
 
+@supports not (gap: 50px) {
+  .content > * {
+    margin-bottom: 50px;
+  }
+}
+
 .logo {
   width: 144.08px;
   height: 114.92px;
+  max-width: 100%;
 }
 
 h1 {
   font-weight: normal;
   font-size: 50px;
   text-align: center;
-  line-height: normal;
+  line-height: 1.2;
 }
 
 .main-image {
@@ -49,6 +89,8 @@ h1 {
   width: 100%;
   max-height: 330.34px;
   height: 330px;
+  -o-object-fit: contain;
+  object-fit: contain;
 }
 
 .card {
@@ -59,44 +101,72 @@ h1 {
 .description {
   font-size: 25px;
   text-align: center;
-  line-height: 30px;
+  line-height: 1.2;
   padding: 4px;
 }
 
 .cta-button {
   padding: 15px 30px;
+  -webkit-border-radius: 70px;
+  -moz-border-radius: 70px;
   border-radius: 70px;
   border: 2px solid #ff804f;
   background-color: transparent;
   cursor: pointer;
+  -webkit-transition: background-color 0.2s;
+  -o-transition: background-color 0.2s;
+  -moz-transition: background-color 0.2s;
   transition: background-color 0.2s;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
 
 .cta-button span {
-  font-family: 'Abordage-Regular', Helvetica;
+  font-family: 'Abordage-Regular', Helvetica, Arial, sans-serif;
   font-weight: normal;
   color: #ff804f;
   font-size: 20px;
   letter-spacing: 1px;
   white-space: nowrap;
   line-height: 1;
+  -webkit-transition: color 0.2s;
+  -o-transition: color 0.2s;
+  -moz-transition: color 0.2s;
   transition: color 0.2s;
 }
 
-.cta-button:hover {
+.cta-button:hover,
+.cta-button:focus {
   background-color: #ff804f;
+  outline: none;
 }
 
-.cta-button:hover span {
+.cta-button:hover span,
+.cta-button:focus span {
   color: white;
 }
 
 footer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   min-width: 300px;
   max-width: 900px;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -moz-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -moz-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   gap: 30px;
   padding: 20px 0;
@@ -115,16 +185,27 @@ footer {
 .footer-content a {
   color: #ff804f;
   text-decoration: underline;
+  -webkit-transition: color 0.2s;
+  -o-transition: color 0.2s;
+  -moz-transition: color 0.2s;
   transition: color 0.2s;
 }
 
-.footer-content a:hover {
+.footer-content a:hover,
+.footer-content a:focus {
   color: #e06b3e;
+  outline: none;
 }
 
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
   .content {
     gap: 30px;
+  }
+  
+  @supports not (gap: 30px) {
+    .content > * {
+      margin-bottom: 30px;
+    }
   }
   
   h1 {
@@ -137,5 +218,26 @@ footer {
   
   .footer-column {
     width: 100%;
+  }
+}
+
+@media print {
+  body {
+    background: none;
+  }
+  
+  .container {
+    padding: 20px;
+    min-height: auto;
+  }
+  
+  .cta-button {
+    display: none;
+  }
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  body {
+    -webkit-font-smoothing: subpixel-antialiased;
   }
 }
