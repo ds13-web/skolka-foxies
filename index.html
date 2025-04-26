@@ -4,7 +4,12 @@
     <meta charset="utf-8" />
     <title>Foxies - Lišácký dobrá školka!</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link href="styles.css" rel="stylesheet" />
+    <!--[if IE]>
+    <script src="https://cdn.jsdelivr.net/npm/css-vars-ponyfill@2"></script>
+    <script>cssVars();</script>
+    <![endif]-->
   </head>
   <body>
     <div class="container">
@@ -14,6 +19,7 @@
           class="logo"
           alt="Foxies logo"
           src="/header.svg"
+          onerror="this.onerror=null; this.src='/header.png';"
         />
 
         <!-- Main heading -->
@@ -26,6 +32,7 @@
           class="main-image"
           alt="Children with fox illustration"
           src="/img.svg"
+          onerror="this.onerror=null; this.src='/img.png';"
         />
 
         <!-- Description text -->
