@@ -106,10 +106,10 @@ h1 {
 }
 
 .cta-button {
-  display: inline-flex;              /* allow centering and consistent sizing */
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  text-decoration: none;             /* remove underline on links */
+  text-decoration: none;
   padding: 15px 30px;
   border-radius: 70px;
   border: 2px solid #ff804f;
@@ -119,10 +119,9 @@ h1 {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
-  margin-top: 8px;                   /* small space from previous element */
+  margin-top: 8px;
 }
 
-/* Keep span styling (you can keep your existing .cta-button span rules) */
 .cta-button span {
   font-family: 'Abordage-Regular', Helvetica, Arial, sans-serif;
   font-weight: normal;
@@ -134,7 +133,6 @@ h1 {
   transition: color 0.2s;
 }
 
-/* Hover / focus states */
 .cta-button:hover,
 .cta-button:focus {
   background-color: #ff804f;
@@ -146,19 +144,19 @@ h1 {
   color: white;
 }
 
-/* Make the phone button slightly smaller / separated if desired */
+/* Phone button variant */
 .phone-button {
-  margin-top: 12px;      /* extra gap below the email button */
-  padding: 12px 26px;    /* slightly smaller padding for phone */
+  margin-top: 12px;
+  padding: 12px 26px;
 }
 
-/* Accessibility: visible focus ring for keyboard users */
+/* Accessible focus ring for keyboard users */
 .cta-button:focus {
   outline: 3px solid rgba(255,128,79,0.18);
   outline-offset: 3px;
 }
 
-/* Responsive: full-width buttons on small screens */
+/* Responsive: full-width buttons on very small screens */
 @media screen and (max-width: 480px) {
   .cta-button {
     width: 100%;
