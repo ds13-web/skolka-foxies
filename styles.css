@@ -106,22 +106,23 @@ h1 {
 }
 
 .cta-button {
+  display: inline-flex;              /* allow centering and consistent sizing */
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;             /* remove underline on links */
   padding: 15px 30px;
-  -webkit-border-radius: 70px;
-  -moz-border-radius: 70px;
   border-radius: 70px;
   border: 2px solid #ff804f;
   background-color: transparent;
   cursor: pointer;
-  -webkit-transition: background-color 0.2s;
-  -o-transition: background-color 0.2s;
-  -moz-transition: background-color 0.2s;
-  transition: background-color 0.2s;
+  transition: background-color 0.2s, color 0.2s;
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+  margin-top: 8px;                   /* small space from previous element */
 }
 
+/* Keep span styling (you can keep your existing .cta-button span rules) */
 .cta-button span {
   font-family: 'Abordage-Regular', Helvetica, Arial, sans-serif;
   font-weight: normal;
@@ -130,12 +131,10 @@ h1 {
   letter-spacing: 1px;
   white-space: nowrap;
   line-height: 1;
-  -webkit-transition: color 0.2s;
-  -o-transition: color 0.2s;
-  -moz-transition: color 0.2s;
   transition: color 0.2s;
 }
 
+/* Hover / focus states */
 .cta-button:hover,
 .cta-button:focus {
   background-color: #ff804f;
@@ -145,6 +144,30 @@ h1 {
 .cta-button:hover span,
 .cta-button:focus span {
   color: white;
+}
+
+/* Make the phone button slightly smaller / separated if desired */
+.phone-button {
+  margin-top: 12px;      /* extra gap below the email button */
+  padding: 12px 26px;    /* slightly smaller padding for phone */
+}
+
+/* Accessibility: visible focus ring for keyboard users */
+.cta-button:focus {
+  outline: 3px solid rgba(255,128,79,0.18);
+  outline-offset: 3px;
+}
+
+/* Responsive: full-width buttons on small screens */
+@media screen and (max-width: 480px) {
+  .cta-button {
+    width: 100%;
+    max-width: 360px;
+  }
+  .cta-button span {
+    white-space: normal;
+    text-align: center;
+  }
 }
 
 footer {
