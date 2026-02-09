@@ -1,29 +1,27 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="cs">
   <head>
     <meta charset="utf-8" />
     <title>Foxies - Lišácky dobrá školka!</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Nová dětská skupina Foxies v Praze - City West C2. Moderní prostory, kvalitní péče pro děti od 1 do 6 let.">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&display=swap" rel="stylesheet" />
     <link href="styles.css" rel="stylesheet" />
-    <!--[if IE]>
-    <script src="https://cdn.jsdelivr.net/npm/css-vars-ponyfill@2"></script>
-    <script>cssVars();</script>
-    <![endif]-->
-    <!-- Favicon -->
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-    <link rel="icon" type="image/png" href="/favicon.png">
   </head>
   <body>
     <div class="container">
       <div class="content">
         <!-- Logo header -->
-        <img
-          class="logo"
-          alt="Foxies logo"
-          src="/header.svg"
-          onerror="this.onerror=null; this.src='/header.png';"
-        />
+        <div class="logo-section">
+          <img
+            class="logo"
+            alt="Foxies logo"
+            src="/header.svg"
+            onerror="this.onerror=null; this.src='/header.png';"
+          />
+          <p class="logo-text">FOXIES</p>
+        </div>
 
         <!-- Main heading -->
         <header>
@@ -31,64 +29,91 @@
         </header>
 
         <!-- Main illustration -->
-        <img
-          class="main-image"
-          alt="Children with fox illustration"
-          src="/img.svg"
-          onerror="this.onerror=null; this.src='/img.png';"
-        />
+        <figure class="illustration-section">
+          <img
+            class="main-image"
+            alt="Děti s liškou - Již brzy otevíráme a Vidíme se?"
+            src="/img.svg"
+            onerror="this.onerror=null; this.src='/img.png';"
+          />
+        </figure>
 
         <!-- Description text -->
-        <div class="card">
+        <div class="description-section">
           <p class="description">
-            Přihlaste svoje dítě do nové dětské skupiny Foxies!
-            Již brzy nás najdete v moderních prostorech budovy City West C2, 
-            jen pár kroků od stanice metra linky B – Stodůlky.
+            Nová dětská skupina FOXIES se nachází v moderních prostorách budovy budovy City West, v těsné blízkosti metra linky B – Stodůlky. Naše skupina je koncipována jako dvojtřída pro děti ve věku od 1 do 6 let a staví na dlouhodobých zkušenostech v práci s dětmi.
+          </p>
+
+          <p class="description">
+            Prostory jsou rozděleny na dvě třídy: jesličky pro nejmenší a třídu pro starší děti.
+          </p>
+
+          <p class="description">
+            Pokud chcete svému dítěti nabídnout nové podněty, podporit jeho adaptaci v dětském kolektivu nebo potřebujete zajistit smysluplný program pro své dítě během pracovní doby, školka Foxies je tou správnou volbou.
+          </p>
+
+          <p class="call-to-action">
+            Těšíme se na vás i vaše děti!
           </p>
         </div>
 
-        <!-- CTA Buttons -->
+        <!-- CTA Button -->
         <a class="cta-button" href="mailto:info@skolkafoxies.cz">
-          <span>info@skolkafoxies.cz</span>
-        </a>
-
-        <a class="cta-button phone-button" href="tel:+420723520059" aria-label="Zavolat +420 723 520 059">
-          <span>+420 723 520 059</span>
+          <span>VÍCE INFORMACÍ ZDE</span>
         </a>
 
         <!-- Footer -->
         <footer>
           <!-- Address column -->
           <div class="footer-column">
+            <h3>Kde nás najdete?</h3>
             <div class="footer-content">
               <p>
-                Adresa:
+                Dětská skupina FOXIES City West C2,
                 <br />
+                Laurinova 4
                 <br />
-                City West C2, Laurinova 4, 150 00 Praha 13
-                <br />
-                <br />
+                150 00 Praha 13 – Stodůlky
+              </p>
+              <p class="footer-note">
+                (Nacházíme se jen pár kroků od výstupu z metra trasy B – Stodůlky)
               </p>
               <a
+                class="footer-link"
                 href="https://maps.app.goo.gl/gTkgHF1wxDyQoumN8"
                 rel="noopener noreferrer"
                 target="_blank"
               >
-                zobrazit mapu
+                Zobrazit mapu
               </a>
+            </div>
+          </div>
+
+          <!-- Contact column -->
+          <div class="footer-column">
+            <h3>Spojte se s námi</h3>
+            <div class="footer-content">
+              <p>
+                E-mail: <a href="mailto:info@skolkafoxies.cz">info@skolkafoxies.cz</a>
+                <br />
+                Telefon: <a href="tel:+420723520059">+420 723 520 059</a>
+                <br />
+                Instagram: <a href="https://instagram.com/foxies.ds" target="_blank" rel="noopener noreferrer">@foxies.ds</a>
+              </p>
             </div>
           </div>
 
           <!-- Company details column -->
           <div class="footer-column">
+            <h3>Firemní údaje</h3>
             <div class="footer-content">
               <p>
-                Firemní údaje:
-                <br />
-                <br />
                 BEST NANNIES, z.s.,
                 <br />
-                Valentínská 1061/6, Staré Město, 110 00 Praha 1
+                Valentínská 1061/6,
+                <br />
+                Staré Město, 110 00 Praha 1
+                <br />
                 IČ: 06698565
               </p>
             </div>
