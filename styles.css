@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?families=Fredoka:wght@400&display=swap');
 
 body {
     font-family: 'Fredoka', sans-serif;
@@ -6,6 +6,38 @@ body {
     color: #FF6C33;
 }
 
-/* Additional responsive design and layout styles based on original styles.css go here */
-/* You would include the entire existing responsive design code from styles.css here while making the necessary changes */
-/* Replace all relevant font-family declarations to use 'Fredoka' instead of 'Abordage-Regular' */
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+.header {
+    text-align: center;
+    padding: 50px;
+}
+
+.header h1 {
+    font-size: 2.5em;
+    color: #FF6C33;
+}
+
+.footer {
+    text-align: center;
+    padding: 20px;
+}
+
+@media (max-width: 768px) {
+    .header h1 {
+        font-size: 2em;
+    }
+    .container {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header h1 {
+        font-size: 1.5em;
+    }
+}
