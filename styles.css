@@ -167,7 +167,6 @@ header {
   font-size: 1rem;
   line-height: 1.8;
   color: var(--color-primary);
-  font-weight: 100;
 }
 
 
@@ -239,7 +238,7 @@ footer {
 .footer-content {
     font-size: 0.95rem;
     line-height: 1.8;
-    color: #e5591f;
+    color: var(--color-primary);
   }
 
 .footer-content a {
